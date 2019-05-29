@@ -36,4 +36,5 @@ docker_builder:
     folder: /var/lib/gems
     fingerprint_script: echo $RUBY_VERSION && cat Gemfile
     populate_script: bundle install
+  bundle_install_script: bundle install # to fix PATH
   verify_script: bundle exec kitchen verify $INSTANCE
